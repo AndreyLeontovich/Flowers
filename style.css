@@ -38,7 +38,7 @@ a{
     padding: 8px 33px;
     cursor: pointer;
     transition: .2s all ease-in-out;
-    animation: one 1s forwards;
+    
 }
 
 
@@ -58,20 +58,17 @@ a{
 
 
 .nav__btn:hover{
-    animation: one 1s forwards;
+    animation: scale-up-center_card 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-@keyframes one {
 
-    0%{
-        transform: translateY(0);
+@keyframes scale-up-center_card {
+    0% {
+      transform: translateY(0px);
     }
-    50%{
+    100% {
         transform: translateY(-10px);
     }
-   
-
-
 }
 
 
@@ -89,6 +86,19 @@ a{
 .main__text{
     max-width: 523px;
     margin: 0 auto;
+
+
+    animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
+
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
 
         .main__title{
@@ -102,7 +112,22 @@ a{
             color: rgba(21, 105, 99, 1);
             margin-top: 200px;
             
+            animation: title 3s infinite;
+
         }
+
+        @keyframes title{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(-10px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        
 
         .main_desc{
             text-align: center;
@@ -195,10 +220,27 @@ a{
     max-width: 239px;
     padding: 15px 20px;
     padding-top: 25px;
-
+    cursor: pointer;
     border:  1px solid #E0E0E0;
+
+    
+    transition: 1s linear all;
 }
 
+.service__item:hover{
+    animation: scale-up-center_card 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@keyframes scale-up-center_card {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+  
 
 @media  (max-width: 1131px){
 
@@ -312,7 +354,22 @@ a{
 
 .goods__item{
     max-width: 100%;
+    cursor: pointer;
+    transition: 1s ease-in-out;
 }
+.goods__item:hover{
+    animation: scale-up-center_card 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes scale-up-center_card {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
 
         .goods__title{
             font-family: 'Montserrat';
